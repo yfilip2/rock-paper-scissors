@@ -5,6 +5,12 @@
   <title>Page Title</title>
 </head>
 <body>
+  <div id="container">
+    <button id="btn1">Rock</button>
+    <button id="btn2">Paper</button>
+    <button id="btn3">Scissors</button>
+  </div>
+
   <script>
    function getComputerChoice()
    {
@@ -93,8 +99,130 @@
   let points = 0
 
  // console.log(playRound(playerSelection, computerSelection));
-  game()
+ // game()
+ 
+ const container = document.querySelector('#container');
+
+const content = document.createElement('div');
+content.classList.add('content');
+
+const score = document.createElement('score');
+
+let l = 0;
+let r = 0;
+
+const btn = document.querySelector('#btn1');
+btn.addEventListener('click', () => {
+  //console.log('hello world');
+  const computerSelection = getComputerChoice();
+  if (playRound("Rock", computerSelection) == 0){
+    console.log("Tie!");
+    content.textContent = 'Tie!';
+    content.style.color = 'black';
+   container.appendChild(content);
+
+   score.textContent = "Score: " + l;
+   container.appendChild(score);
+   r++;
+  }
+  if (playRound("Rock", computerSelection) == 1){
+   // console.log("Loss!");
+   content.textContent = 'Loss!';
+   content.style.color = 'red';
+   container.appendChild(content);
+
+   score.textContent = "Score: " + l;
+   container.appendChild(score);
+   r++;
+  }
+  if (playRound("Rock", computerSelection) == 2){
+    console.log("Win!");
+    content.textContent = 'Win!';
+    content.style.color = 'green';
+   container.appendChild(content);
+   l++;
+
+   score.textContent = "Score: " + l;
+   container.appendChild(score);
+   r++;
+  }
+});
   
+const btn2 = document.querySelector('#btn2');
+btn2.addEventListener('click', () => {
+  const computerSelection = getComputerChoice();
+  if (playRound("Paper", computerSelection) == 0){
+    console.log("Tie!");
+    content.textContent = 'Tie!';
+    content.style.color = 'black';
+   container.appendChild(content);
+
+   score.textContent = "Score: " + l;
+   container.appendChild(score);
+   r++;
+  }
+  if (playRound("Paper", computerSelection) == 1){
+   // console.log("Loss!");
+   content.textContent = 'Loss!';
+   content.style.color = 'red';
+   container.appendChild(content);
+
+   score.textContent = "Score: " + l;
+   container.appendChild(score);
+   r++;
+  }
+  if (playRound("Paper", computerSelection) == 2){
+    console.log("Win!");
+    content.textContent = 'Win!';
+    content.style.color = 'green';
+   container.appendChild(content);
+   l++;
+
+   score.textContent = "Score: " + l;
+   container.appendChild(score);
+   r++;
+  }
+});
+
+const btn3 = document.querySelector('#btn3');
+btn3.addEventListener('click', () => {
+  const computerSelection = getComputerChoice();
+  if (playRound("Scissors", computerSelection) == 0){
+    console.log("Tie!");
+    content.textContent = 'Tie!';
+    content.style.color = 'black';
+   container.appendChild(content);
+
+   score.textContent = "Score: " + l;
+   container.appendChild(score);
+   r++;
+  }
+  if (playRound("Scissors", computerSelection) == 1){
+   // console.log("Loss!");
+   content.textContent = 'Loss!';
+   content.style.color = 'red';
+   container.appendChild(content);
+
+   score.textContent = "Score: " + l;
+   container.appendChild(score);
+   r++;
+  }
+  if (playRound("Scissors", computerSelection) == 2){
+    console.log("Win!");
+    content.textContent = 'Win!';
+    content.style.color = 'green';
+   container.appendChild(content);
+   l++;
+
+   score.textContent = "Score: " + l;
+   container.appendChild(score);
+   r++;
+  }
+});
+
+
+
+
   </script>
 </body>
 </html>
