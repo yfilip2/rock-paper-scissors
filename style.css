@@ -1,0 +1,120 @@
+:root {
+    --backgroundColor: #1f2632;
+    --mainColor: #323a49;
+    --accentColor: #58ce93;
+    --fontColor: #cee3e9;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--backgroundColor);
+    font-family: sans-serif;
+}
+
+header {
+    background-color: var(--mainColor);
+    text-align: center;
+    font-size: 45px;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--fontColor);
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.container {
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 60px 0px;
+    background-color: var(--mainColor);
+    border-radius: 20px;
+}
+
+h3 {
+    margin: 0px;
+    font-size: 40px;
+    color: var(--fontColor);
+}
+
+h4 {
+    margin: 0px;
+    font-size: 35px;
+    color: var(--fontColor);
+}
+
+.choice {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+    flex-flow: row nowrap;
+}
+
+button {
+    width: 130px;
+    border: none;
+    background-color: var(--accentColor);
+    color: var(--mainColor);
+    font-size: 25px;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+
+button:hover {
+    background-color: #b1f7a8;
+    cursor: pointer;
+}
+
+button:active {
+    transition-duration: .1s;
+    box-shadow: none;
+}
+
+.score {
+    width: 50%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    font-size: 30px;
+    color: var(--fontColor);
+    text-align: center;
+}
+
+.score span {
+    display: block;
+    margin-top: 5px;
+}
+
+.score p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.roundResult {
+    padding: 20px;
+    font-size: 35px;
+    color: var(--fontColor);
+}
+
+.result {
+    font-size: 40px;
+    color: var(--fontColor);
+}
+
+button.replay {
+    display: none;
+    font-size: 17px;
+}
